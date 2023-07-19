@@ -6,61 +6,64 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+# encuestaConLaravel
+# Presentación del Proyecto
 
-## About Laravel
+## Descripción
+El proyecto desarrollado en Laravel 10 es un sistema de autenticación y gestión de usuarios que utiliza Jetstream y Livewire para la implementación del login y la administración de usuarios. El frontend se diseñó con Tailwind y se utilizó AdminLTE y Bootstrap para la creación del dashboard de administración de sectores. La base de datos MySQL se utilizó para almacenar la información de los usuarios y sus perfiles, cabe destacar que el proyecto es totalmente responsivo y adaptable a cualquier dispositivo.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+El login del proyecto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![login](https://github.com/Jose-Garrido-Dev/encuestaConLaravel/assets/58966474/c0a6971f-cd5c-49e9-8903-fd210059d8b3)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Edición de datos
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![edicion datos](https://github.com/Jose-Garrido-Dev/encuestaConLaravel/assets/58966474/158fd94d-9141-413e-9df8-65f05c64465c)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Características Principales
+- **Autenticación con Jetstream y Livewire**: Se implementó un sistema de autenticación seguro y eficiente utilizando Jetstream y Livewire, lo que permite a los usuarios iniciar sesión y proteger sus cuentas.
 
-### Premium Partners
+- **Dashboard de Administración de Sectores**: El sistema cuenta con un panel de administración donde los usuarios pueden gestionar los sectores y realizar diversas acciones.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- **Gestión de Perfil de Usuarios**: Los usuarios pueden editar su perfil y modificar su contraseña desde la barra lateral, lo que brinda una experiencia de usuario personalizada.
 
-## Contributing
+  
+- **Perfil Evaluado**: El evaluado solo tendrá acceso al dashboard de bienvenida donde se le saluda y puede editar su perfil.
+- **Perfil Evaluador**: El evaluador inicialmente visualiza un panel con un botón de ver usuarios, al presionarlo se visualizará una tabla de los usuarios
+activos de un base de datos MYSQL,a su vez a su derecha un botón azul que dice Evaluar que al presionarlo, lo direcciona a una vista donde hay preguntas y
+alternativas extraidas de una base de datos, con respuestas en formato radio, al seleccionar todas presionar guardar y  a través de una petición ajax se
+guardarán al instante en la bd en la tabla evaluacion_respuestas, en esta tabla extraje datos de diferentes tablas  para almacenar los datos, y una vez que
+los datos son almacenados en la lista de usuarios ya deja de aparecer el usuario que ya fue evaluado, tambien este tipo de usuarios puede realizar todas las
+funcionalidades relativas a la edición de su perfil.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![usuarios](https://github.com/Jose-Garrido-Dev/encuestaConLaravel/assets/58966474/a02a0031-3432-49fa-a354-0c6b4eb22b89)
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+- **Perfil Administrador**:
+- **Autenticación de Doble Factor**: En este apartado, el administrador cuenta con la posibilidad de descargar excel de reporte de la plataforma de la evaluación realizada, está en modelo básico con posibilidades de seguir mejorando el excel descargado.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![descarga reporte](https://github.com/Jose-Garrido-Dev/encuestaConLaravel/assets/58966474/ccfe1f96-5fd4-4f69-865a-a94d3cefde7b)
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **Seguridad Avanzada**: Se tomaron medidas para desautenticar a usuarios no autorizados y eliminar cuentas de manera segura cuando sea necesario.
+
+## Lista de Usuarios Registrados
+1. mail@enovus1.cl - 1111   Evaluador
+2. mail@enovus2.cl - 2222   Evaluador
+3. mail@enovus3.cl - 3333   Evaluado
+4. mail@enovus4.cl - 4444   Evaluado
+5. mail@enovus5.cl - 5555   Evaluado
+6. mail@enovus6.cl - 6666   Evaluado
+7. mail@enovus7.cl - 7777   Evaluado
+8. mail@enovus8.cl - 8888   Evaluado
+9. adm@enovus.cl - admin@   Evaluado
+
+## Imagen de la Base de Datos
+
+![diagrama_evadesempeno](https://github.com/Jose-Garrido-Dev/encuestaConLaravel/assets/58966474/679503e1-d725-4eb9-89af-d25486c308e0)
+
